@@ -10,7 +10,7 @@ public class attack_move implements move {
 
     @Override
     public String getName() {
-        return "";
+        return name;
     }
 
     @Override

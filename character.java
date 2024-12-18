@@ -31,7 +31,10 @@ public abstract class character {
     }
 
     public double getHP() {
-        return HP;
+        if (currentHP < 0) {
+            return 0;
+        }
+        return currentHP;
     }
 
     public move getMove1() {
@@ -49,5 +52,16 @@ public abstract class character {
 
     public String getName() {
         return name;
+    }
+
+    public double getSpeed() {
+        return currentSpeed;
+    }
+
+    public void recover() {
+        this.currentHP = HP;
+        this.currentAttack = currentAttack;
+        this.currentDefense = currentDefense;
+        this.currentSpeed = currentSpeed;
     }
 }

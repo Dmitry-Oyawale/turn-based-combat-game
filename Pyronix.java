@@ -8,9 +8,13 @@ public class Pyronix extends character{
 
         this.name = "Pyronix";
         this.HP = 80;
+        this.currentHP = 80;
         this.attack = 75;
+        this.currentAttack = 75;
         this.defense = 50;
+        this.currentDefense = 50;
         this.speed = 100;
+        this.currentSpeed = 100;
         this.strategy = new speed_boost();
         ArrayList<String> type = new ArrayList<>();
         type.add("Fire");

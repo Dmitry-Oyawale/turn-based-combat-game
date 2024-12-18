@@ -8,9 +8,13 @@ public class Lumivine extends character{
 
         this.name = "Lumivine";
         this.HP = 60;
+        this.currentHP = 60;
         this.attack = 67;
+        this.currentAttack = 67;
         this.defense = 85;
+        this.currentDefense = 85;
         this.speed = 116;
+        this.currentSpeed = 116;
         this.strategy = new speed_boost();
         ArrayList<String> type = new ArrayList<>();
         type.add("Grass");
@@ -28,7 +32,7 @@ public class Lumivine extends character{
         {
             currentHP -= (n.getDamage() * 2);
         }
-        if (n.getType().equals("Water") || n.getType().equals("Electric"))
+        else if (n.getType().equals("Water") || n.getType().equals("Electric"))
         {
             currentHP -= (n.getDamage()/2);
         }
